@@ -1,0 +1,179 @@
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8); /* subtle gloss effect */
+    backdrop-filter: blur(10px); /* glassy feel */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 0 1rem;
+  }
+  
+  .app-header h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+  
+  .app-header p {
+    display: none; /* hide subtext for now, since Apple style is minimal */
+  }
+
+  .app-header h1:hover {
+    color: #000;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    cursor: default;
+  }
+
+  .header-left {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .welcome-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .header-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: fadeInDown 0.6s ease-in-out;
+  }
+  
+  .header-icon {
+    font-size: 1.8rem;
+    color: #000;
+  }
+  
+  .header-texts {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .animated-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    color: #000;
+    animation: popIn 0.7s ease forwards;
+  }
+  
+  .header-caption {
+    font-size: 0.85rem;
+    color: #444;
+    margin-top: 0.1rem;
+    line-height: 1.2;
+  }
+  
+  /* Animations */
+  @keyframes popIn {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .header-right {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .user-icon-wrapper {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+  }
+  
+  .user-icon {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .user-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    animation: fadeIn 0.2s ease;
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .dropdown-item:hover {
+    border-color: #007aff;
+    background-color: #f0f8ff;
+  }
+
+  .dropdown-item:focus {
+    border: none;
+    color: #000000;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  

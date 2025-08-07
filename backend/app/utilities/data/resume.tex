@@ -1,0 +1,137 @@
+
+
+\documentclass[a4paper,11pt]{article}
+
+% paragraph spacing
+\usepackage{parskip} 
+
+% fonts
+\usepackage{fontspec}
+% setting font
+\setmainfont{Times New Roman}
+
+% colors
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{myteal}{HTML}{006d6d}
+
+% margins
+\usepackage[scale=0.9, top=.1in, bottom=.1in, left=0.3in, right=0.3in]{geometry}
+
+% tables
+\usepackage{tabularx}
+
+% lists
+\usepackage{enumitem}
+
+% custom titles
+\usepackage{titlesec}
+\titlespacing{\section}{5pt}{5pt}{5pt}
+
+\titleformat{\section}
+  {\large\bfseries\raggedright\color{myteal}} % formatting
+  {}{0em}
+  {\uppercase} % this wraps the section title
+  [\color{black}\titlerule]
+
+% centering the contact info section
+\newcolumntype{C}{>{\centering\arraybackslash}X} 	
+
+% hyperlinks
+\usepackage[unicode, draft=false]{hyperref}
+
+\begin{document}
+% non-numbered pages
+\pagestyle{empty}
+
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color{myteal} \LARGE\bfseries{Venkata Sai Kumar Jetti}\\[8pt]
+{\href{mailto:venkatajetti2@gmail.com}{venkatajetti2@gmail.com} $|$}
+{\href{tel:2404575305}{2404575305} $|$}
+{\href{https://linkedin.com/in/sai-jetti}{https://linkedin.com/in/sai-jetti} $|$}
+{\href{https://github.com/VenkataSaiKumar07}{github.com/VenkataSaiKumar07}}
+\end{tabularx}
+
+\section{Summary}
+\vspace{1pt}
+Backend-focused Software Engineer with strong experience in building secure, scalable infrastructure using Node.js, Spring Boot, AWS, and PostgreSQL. Proven ability to reduce latency, implement secure auth flows, and deploy distributed services using Docker and Kubernetes. Skilled in API integrations, automation (cron, CI/CD), Redis caching, and server performance tuning.
+
+
+\section{Experience}
+\textbf{CHit} \hfill August 2024 - April 2025\\[1pt]
+\textbf{\textit{Software Intern | Full Stack Developer}}\ \hfill \textbf{\textit{Python, React, Java, Spring Boot, AWS, SQL, RESTful API, PostgreSQL, Docker, JWT, OAuth 2.0}}\vspace{-5pt}
+\begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=0.8pt]
+    \item Reduced REST API latency by 35\% by optimizing Spring Boot controllers and middleware, improving peak performance.
+    \item Enabled secure role-based access control (RBAC) across 5+ user types using OAuth 2.0 and JWT with AWS Cognito.
+    \item Increased frontend form completion rate by 25\% by implementing real-time field validation and reactive error handling in React.
+    \item Improved PostgreSQL dashboard query speeds by ~40\% by redesigning indexes and normalizing schema structures.
+    \item Accelerated deployments by 3× using Docker and automated CI/CD pipelines via AWS ECS and GitHub Actions.
+    \end{itemize}
+
+\textbf{Infosys} \hfill May 2021 - August 2023\\[1pt]
+\textbf{\textit{Software Engineer | Full Stack Developer}}\ \hfill \textbf{\textit{Java, Spring Boot, Golang, Python, AWS, React, Kubernetes, Prometheus, Docker, CloudWatch}}\vspace{-5pt}
+\begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=0.8pt]
+    \item Reduced system latency by 80\% by migrating metric pipelines to AWS + Amazon Managed Prometheus.
+    \item Automated pod lifecycle and self-healing processes in Kubernetes using custom Go-based Operators, reducing manual intervention by 70\%.
+    \item Improved system stability by fixing JVM memory/CPU leaks and increasing unit test coverage by 37\%.
+    \item Built live monitoring dashboards using React + Prometheus + CloudWatch for real-time infrastructure health tracking.
+    \end{itemize}
+
+
+
+
+\section{Technical Skills}
+\begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=1pt]
+\item \textbf{Languages} \hspace*{1em} Java, Python, Golang, JavaScript, SQL
+\item \textbf{Frameworks} \hspace*{1em} Spring Boot, React, FastAPI, Hibernate, JUnit, Mockito
+\item \textbf{Cloud \& DevOps} \hspace*{1em} AWS (ECS, Lambda, EC2, Prometheus, S3), Docker, Kubernetes, Heroku (familiar)
+\item \textbf{Databases} \hspace*{1em} PostgreSQL, MySQL, MongoDB, Redis, Neo4j
+\item \textbf{Tools} \hspace*{1em} Git, Jenkins, Postman, Gerrit, Linux, REST APIs, CloudWatch, ELK
+\item \textbf{Concepts} \hspace*{1em} Secure Auth (OAuth2, JWT), CI/CD, Microservices, API Integration, Caching, RAG/LLMs
+\end{itemize}
+
+
+
+\section{Projects}
+\textbf{Resume Builder Web Application} \hfill May 2025 – Current\\[1pt]
+\textbf{\textit{Full-stack LaTeX resume builder with secure backend and PDF generation.}}\vspace{-5pt}
+\begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=0.8pt]
+    
+    \item Built a responsive React + Tailwind frontend that enables real-time LaTeX preview and download.
+    \item Implemented secure JWT session-based auth with FastAPI and auto-expiry refresh tokens.
+    \item Connected backend to XeLaTeX engine via Jinja2 for on-the-fly LaTeX compilation and rendering.
+    \item Created editable JSON user profiles for persistent resume editing and update history tracking.
+    \end{itemize}
+
+\textbf{Job Buddy – Agentic Job Application Tracker} \hfill June 2025 – Current\\[1pt]
+\textbf{\textit{AI-powered pipeline to parse jobs and rewrite resumes using LLMs.}}\vspace{-5pt}
+\begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=0.8pt]
+    
+    \item Used MCP + OpenAI + Groq’s llama3-70b to autonomously scrape, parse, and score 5K+ job listings from Indeed and Dice.
+    \item Engineered custom LLM prompt chain to rewrite resume bullet points with ATS-optimized phrasing.
+    \item Built a modular FastAPI backend with isolated services for scraping, parsing, scoring, and bullet rewriting.
+    \item Implemented retry logic, error logging, and task queueing to allow background processing and automation akin to cron jobs.
+    \end{itemize}
+
+
+
+
+\section{Education}
+\textbf{University of Maryland, Baltimore County} \hfill August 2023 - May 2025\\
+\textbf{\textit{Master of Science in Data Science}} \hfill \textit{\textbf{GPA:4.0/4.0}}\\ 
+\textbf{Courses}:LLMs (Transformers, RAG, Fine-Tuning, Prompt Engineering), Big Data Processing, Machine Learning
+
+\textbf{RVR \& JC College of Engineering, India} \hfill July 2017 - April 2021\\
+\textbf{\textit{Bachelor of Technology in Electronics and Communication Engineering}} \hfill \textit{\textbf{GPA:9.08/10}}
+
+
+
+
+\section{Certifications}
+\begin{itemize}[nosep, after=\strut, leftmargin=0.8em, itemsep=0.8pt]
+    \item \textbf{Google Machine Learning Engineer}\\
+    Google \hfill June 2025\end{itemize}
+
+
+\end{document}
